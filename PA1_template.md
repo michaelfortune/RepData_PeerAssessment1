@@ -29,6 +29,9 @@ b) Plot a histogram showing the total number of steps taken each day
 x <- qplot(tot.steps, binwidth = 1000, xlab = "total number of steps taken each day") 
 x + theme(panel.background = element_rect(fill = 'light green', colour = 'red')) 
 ```
+
+![plot1] (https://github.com/michaelfortune/RepData_PeerAssessment1/blob/master/Plot1.png)
+
 c) Calculate and display the mean of the total number of steps taken per day
 ```r
 print(mean(tot.steps, na.rm=TRUE))
@@ -57,6 +60,10 @@ c) Display the plot
 ```r
 avgplot + theme(panel.background = element_rect(fill = 'light green', colour = 'red'))    
 ```
+
+![plot2] (https://github.com/michaelfortune/RepData_PeerAssessment1/blob/master/Plot2.png)
+
+
 d) Determine which 5-minute interval, on average across all the days in the dataset, 
 contains the maximum number of steps and display the value.
 ```r
@@ -101,6 +108,10 @@ e) Plot a histogram showing the total number of steps taken each day
 x <- qplot(tot.steps, binwidth = 1000, xlab = "Daily steps with imputed values") 
 x + theme(panel.background = element_rect(fill = 'light green', colour = 'red')) 
 ```
+
+![plot3] (https://github.com/michaelfortune/RepData_PeerAssessment1/blob/master/Plot3.png)
+
+
 f) Calculate and display the mean of the total number of steps taken per day
 ```r
 print(mean(tot.steps))
@@ -141,3 +152,5 @@ d) Display the plot
 ```r
 daycomp +  theme(panel.background = element_rect(fill = 'light green', colour = 'red')) 
 ```
+![plot4] (https://github.com/michaelfortune/RepData_PeerAssessment1/blob/master/Plot4.png)
+
