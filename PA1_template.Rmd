@@ -20,7 +20,9 @@ actdata <- read.csv("activity.csv")
 
 2. What is mean total number of steps taken per day?
 ----------------------------------------------------
-a) Use tapply to calculate the total number of steps taken each day
+a) Use tapply to calculate the total number of steps taken each day.
+
+Please note that na.rm = TRUE.
 ```r
 tot.steps <- tapply(actdata$steps, actdata$date, FUN=sum, na.rm=TRUE)
 ```
@@ -33,19 +35,27 @@ x + theme(panel.background = element_rect(fill = 'light green', colour = 'red'))
 ![plot1] (https://github.com/michaelfortune/RepData_PeerAssessment1/blob/master/Plot1.png)
 
 c) Calculate and display the mean of the total number of steps taken per day
+
 ```r
 print(mean(tot.steps, na.rm=TRUE))
 ```
 ```r
 ## [1] 9354.23
 ```
+If in the tapply function above, na.rm had not been set to TRUE, the value would have been 10766. 
+This will be considered again below in part 4 where the mean is calculated again.
+
 d) Calculate and display the median of the total number of steps taken per day
+
 ```r
 print(median(tot.steps, na.rm=TRUE))
 ```
 ```r
 ## [1] 10395
 ```
+If in the tapply function above, na.rm had not been set to TRUE, the value would have been 10765
+This will be considered again below in part 4 where the median is calculated again.
+
 3. What is the average daily activity pattern?
 ----------------------------------------------
 a) Calculate averages
@@ -138,6 +148,7 @@ print(median(tot.steps))
 ```r
 ## [1] 10766
 ```
+In the first calculations for mean and median in part 2 above, I set na.rm = TRUE in the tapply function. The results here are quite different. However, had I not done so, the results would have been almost the same (mean 10766, median 10765), showing that the bias was negligible. THis also illustrates the effect of removing the NAs from calculations.
 
 5. Are there differences in activity patterns between weekdays and weekends?
 ----------------------------------------------------------------------------
