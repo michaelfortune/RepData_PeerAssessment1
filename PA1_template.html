@@ -241,9 +241,15 @@ x + theme(panel.background = element_rect(fill = &#39;light green&#39;, colour =
 <pre><code class="r">print(mean(tot.steps, na.rm=TRUE))
 </code></pre>
 
+<pre><code class="r">## [1] 9354.23
+</code></pre>
+
 <p>d) Calculate and display the median of the total number of steps taken per day</p>
 
 <pre><code class="r">print(median(tot.steps, na.rm=TRUE))
+</code></pre>
+
+<pre><code class="r">## [1] 10395
 </code></pre>
 
 <h2>3. What is the average daily activity pattern?</h2>
@@ -276,6 +282,10 @@ contains the maximum number of steps and display the value.</p>
 <pre><code class="r">print(averages[which.max(averages$steps),])
 </code></pre>
 
+<pre><code class="r">##     interval    steps
+## 104      835 206.1698
+</code></pre>
+
 <h2>4. Imputing missing values</h2>
 
 <p>There are a number of days/intervals where there are missing values (coded as NA). 
@@ -289,6 +299,9 @@ These missing values may introduce bias into some calculations or summaries of t
 <p>b) Second, display the number of missing values i.e. NAs</p>
 
 <pre><code class="r">print(sum(NAs))
+</code></pre>
+
+<pre><code class="r">## [1] 2304
 </code></pre>
 
 <p>c) Strategy: create a new dataset that is equal to the original dataset but with the missing data filled in
@@ -326,9 +339,15 @@ x + theme(panel.background = element_rect(fill = &#39;light green&#39;, colour =
 <pre><code class="r">print(mean(tot.steps))
 </code></pre>
 
+<pre><code class="r">## [1] 10766
+</code></pre>
+
 <p>g) Calculate and display the median of the total number of steps taken per day</p>
 
 <pre><code class="r">print(median(tot.steps))
+</code></pre>
+
+<pre><code class="r">## [1] 10766
 </code></pre>
 
 <h2>5. Are there differences in activity patterns between weekdays and weekends?</h2>

@@ -36,11 +36,16 @@ c) Calculate and display the mean of the total number of steps taken per day
 ```r
 print(mean(tot.steps, na.rm=TRUE))
 ```
+```r
+## [1] 9354.23
+```
 d) Calculate and display the median of the total number of steps taken per day
 ```r
 print(median(tot.steps, na.rm=TRUE))
 ```
-
+```r
+## [1] 10395
+```
 3. What is the average daily activity pattern?
 ----------------------------------------------
 a) Calculate averages
@@ -69,6 +74,10 @@ contains the maximum number of steps and display the value.
 ```r
 print(averages[which.max(averages$steps),])
 ```
+```r
+##     interval    steps
+## 104      835 206.1698
+```
 
 4. Imputing missing values
 --------------------------
@@ -82,6 +91,9 @@ NAs <- is.na(actdata$steps)
 b) Second, display the number of missing values i.e. NAs
 ```r
 print(sum(NAs))
+```
+```r
+## [1] 2304
 ```
 c) Strategy: create a new dataset that is equal to the original dataset but with the missing data filled in
 Where value is not NA, use the value, otherwise use the average value for the missing value thereby eliminating
@@ -116,9 +128,15 @@ f) Calculate and display the mean of the total number of steps taken per day
 ```r
 print(mean(tot.steps))
 ```
+```r
+## [1] 10766
+```
 g) Calculate and display the median of the total number of steps taken per day
 ```r
 print(median(tot.steps))
+```
+```r
+## [1] 10766
 ```
 
 5. Are there differences in activity patterns between weekdays and weekends?
